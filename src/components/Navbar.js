@@ -9,7 +9,7 @@ const NavStyle = styled.nav`
     min-height: 10vh;
     width: 100%;
     padding: 0rem 10rem;
-    background: pink;
+    background: var(--sec-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -19,6 +19,7 @@ const NavStyle = styled.nav`
     #logo{
         color: var(--sec-color);
         flex: 2 1 20rem;
+        color: var(--main-color);
     }
     .nav-links{
         display: flex;
@@ -26,6 +27,9 @@ const NavStyle = styled.nav`
         justify-content: space-between;
         align-items: center;
         flex: 1 1 40rem;
+        li a{
+            color: var(--main-color);
+        }
     }
     .nav-toggle{
         padding: 0.5rem;
@@ -36,10 +40,10 @@ const NavStyle = styled.nav`
         svg{
             width: 30px;
             height: auto;
-            color: white;
+            color: var(--main-color);
         }
     }
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 820px){
         .nav-links{
             position: absolute;
             top: 10vh;
@@ -67,12 +71,12 @@ const NavStyle = styled.nav`
             svg{
                 width: 30px;
                 height: auto;
-                color: white;
+                color: var(--main-color);
             }
             &:hover{
                 cursor: pointer;
                 svg{
-                    color: black;
+                    opacity: 0.75;
                 }
             }
         }
