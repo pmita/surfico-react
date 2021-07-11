@@ -10,7 +10,7 @@ const MainHeaderStyle = styled.h1`
 const SubHeaderStyle = styled.h2`
     font-size: 3.2rem;
     color: var(--sec-color);
-    max-width: 75%;
+    max-width: 600px;
 `;
 
 const Headlines = ({
