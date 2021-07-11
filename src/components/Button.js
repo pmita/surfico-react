@@ -26,9 +26,6 @@ const ButtonStyle = styled.button`
         background: ${ props => (
             props.outline ? 'var(--main-color)' : 'var(--sec-color)'
         )};
-        border: 2px solid ${ props => (
-            props.outline ? 'var(--sec-color)' : 'var(--main-color)'
-        )};
         .buttonBody{
             color : ${ props => (
                 props.outline ? 'var(--sec-color)' : 'var(--main-color)'

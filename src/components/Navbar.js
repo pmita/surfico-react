@@ -17,6 +17,7 @@ const NavStyle = styled.nav`
     /*Placing responsive nav relative to the navbar */
     position: relative;
     #logo{
+        font-family: 'Montserrat Bold', sans-serif;
         color: var(--sec-color);
         flex: 2 1 20rem;
         color: var(--main-color);
@@ -27,8 +28,14 @@ const NavStyle = styled.nav`
         justify-content: space-between;
         align-items: center;
         flex: 1 1 40rem;
-        li a{
-            color: var(--main-color);
+        li{
+            &:hover{
+                opacity: 0.5;
+            }
+            a{
+                font-family: 'Montserrat SemiBold', sans-serif;
+                color: var(--main-color);
+            } 
         }
     }
     .nav-toggle{
@@ -50,13 +57,22 @@ const NavStyle = styled.nav`
             left: 0;
             height: 90vh;
             width: 100%;
-            background: red;
+            background: var(--main-color);
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
             transform: translateX(100%);
             transition: all 0.5s ease-in;
+            z-index: 100;
+            li {
+                &:hover{
+                    scale: 1.1;
+                }
+                a{
+                    color: var(--sec-color);
+                }
+            }
         }
         .nav-links.active{
             transform: translateX(0%);
@@ -88,10 +104,6 @@ const Navbar = () => {
     //setting our State
     const [navbarToggle, setNavbarToggle] = useState(false);
 
-    //setting our handlers
-    const toggleHandler = () => {
-        !navbarToggle ? setNavbarToggle(true) : setNavbarToggle(false)
-    }
     return(
         <NavStyle>
             <h2 id="logo">Surfico.Co</h2>
@@ -131,8 +143,8 @@ const Navbar = () => {
             </ul>
             <button 
                 className="nav-toggle"
-                onClick={toggleHandler}
-                onKeyDown={toggleHandler}
+                onClick={() => setNavbarToggle(!navbarToggle)}
+                onKeyDown={() => setNavbarToggle(!navbarToggle)}
                 tabIndex={0}
             >
                     <MdMenu />

@@ -3,12 +3,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const MainHeaderStyle = styled.h1`
+    font-family: 'Montserrat SemiBold', sans-serif;
     font-size: 6rem;
     color: var(--sec-color);
 `;
 
 const SubHeaderStyle = styled.h2`
-    font-size: 3.2rem;
+    font-family: 'Montserrat Regular', sans-serif;
+    font-size: 2.8rem;
     color: var(--sec-color);
     max-width: 600px;
 `;
