@@ -55,6 +55,7 @@ const Banner = ({
                 header="A unique experience"
                 subheader='Let us help you find the best surfing
                 locations so you can focus on surfing only!'
+                outline={true}
             />
             <Button buttonLink="/about" />
         </BannerStyles>

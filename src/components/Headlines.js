@@ -5,25 +5,30 @@ import styled from 'styled-components';
 const MainHeaderStyle = styled.h1`
     font-family: 'Montserrat SemiBold', sans-serif;
     font-size: 6rem;
-    color: var(--sec-color);
+    color: ${ props => (
+        props.outline ? 'var(--sec-color)' : 'var(--main-color)'
+    )};
 `;
 
 const SubHeaderStyle = styled.h2`
     font-family: 'Montserrat Regular', sans-serif;
     font-size: 2.8rem;
-    color: var(--sec-color);
+    color: ${ props => (
+        props.outline ? 'var(--sec-color)' : 'var(--main-color)'
+    )};
     max-width: 600px;
 `;
 
 const Headlines = ({
     header = 'Header goes here',
-    subheader = 'Subjeader goes here'
+    subheader = 'Subjeader goes here',
+    outline = false
 }) => {
     return(
-        <>
-            <MainHeaderStyle>{header}</MainHeaderStyle>
-            <SubHeaderStyle>{subheader}</SubHeaderStyle>
-        </>
+        <div className="headline-wrapper">
+            <MainHeaderStyle outline={outline}>{header}</MainHeaderStyle>
+            <SubHeaderStyle outline={outline}>{subheader}</SubHeaderStyle>
+        </div>
     );
 }
 

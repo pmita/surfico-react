@@ -24,6 +24,9 @@ const GlobalStyles = createGlobalStyle`
         font-size: 62.5%;
         line-height: 1.3;
     }
+    body{
+        overflow-x: hidden;
+    }
     a{
         text-decoration: none;
         color: var(--sec-color);
