@@ -1,6 +1,7 @@
 import React from 'react';
 //importing components
 import Headlines from './Headlines';
+import Button from './Button';
 //import everything styled-components related
 import styled from 'styled-components';
 //importing assets
@@ -29,10 +30,14 @@ const BannerStyles = styled.div`
         opacity: 0.25;
         z-index: -1;
     }
+    .buttonWrapper{
+        z-index: 100;
+    }
 `;
 
 const Banner = () => {
     return(
+        <>
         <BannerStyles className="banner">
             <Headlines 
                 header="A unique experience"
@@ -40,6 +45,8 @@ const Banner = () => {
                 locations so you can focus on surfing only!'
             />
         </BannerStyles>
+        <Button buttonLink="/about" />
+        </>
     );
 }
 
