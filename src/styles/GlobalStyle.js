@@ -54,6 +54,11 @@ const GlobalStyles = createGlobalStyle`
     h6{
         font-size: var(--h1);
     }
+    @media only screen and (max-width: 768px){
+        html{
+            font-size: 52%;
+        }
+    }
 `;
 
 export default GlobalStyles;

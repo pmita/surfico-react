@@ -1,6 +1,8 @@
 import React from 'react';
 //import everything styled components related
 import styled from 'styled-components';
+//importing components
+import Button from '../components/Button';
 
 const LocationItemStyle = styled.div`
     width: 100%;
@@ -10,7 +12,7 @@ const LocationItemStyle = styled.div`
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     img{
         height:60%;
@@ -18,7 +20,7 @@ const LocationItemStyle = styled.div`
         object-fit: cover;
         border-radius: 20px;
     }
-    h1{
+    h2{
         margin: 2rem 0rem 1rem 0rem;
     }
     h4{
@@ -34,11 +36,11 @@ const LocationItem = ({
 }) => {
     return(
         <LocationItemStyle>
-            <img src={img} alt="random text" />
-            <h1>{title}</h1>
+            <img src={img} alt={title} />
+            <h2>{title}</h2>
             <h4>{location}</h4>
             <p>{desc}</p>
-            
+            <Button buttonLink="/" buttonText="Learn More"/>
         </LocationItemStyle>
     );
 }

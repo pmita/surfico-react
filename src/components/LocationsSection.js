@@ -10,21 +10,25 @@ import locationData from '../assets/data/SurfingLocations';
 const LocationsStyle = styled.div`
     min-height: 100vh;
     width: 100%;
-    background: grey;
+    padding: 10rem;
+    background: #E5E5E5;
     .headline-wrapper{
-        padding: 5rem 0;
+        padding: 1rem 0 5rem 0;;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+    @media only screen and (max-width: 820px){
+        padding: 1rem;
+    }
 `;
 
 const LocationsBodyStyle = styled.div`
-    padding: 0 10rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    grid-auto-rows: minmax(300px, 500px);
-    gap: 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 330px);
+    grid-auto-rows: minmax(500px, 550px);
+    gap: 2rem;
 `;
 
 const LocationsSection = () => {
@@ -33,7 +37,8 @@ const LocationsSection = () => {
     return(
         <LocationsStyle>
             <Headlines 
-                header="We are constantly expanding"
+                outline={false}
+                header="Our Locations"
                 subheader="Some of our latest locations"
             />
             <LocationsBodyStyle className="locations-body">

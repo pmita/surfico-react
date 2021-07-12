@@ -17,6 +17,9 @@ const SubHeaderStyle = styled.h2`
         props.outline ? 'var(--sec-color)' : 'var(--main-color)'
     )};
     max-width: 600px;
+    @media only screen and (max-width: 768px){
+        max-width: 300px;
+    }
 `;
 
 const Headlines = ({

@@ -37,6 +37,9 @@ const BannerStyles = styled.div`
     .buttonWrapper{
         margin-top: 5rem;
     }
+    @media only screen and (max-width: 820px){
+        padding: 0 0 0 1rem;
+    }
 `;
 
 const Banner = ({

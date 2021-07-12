@@ -51,6 +51,8 @@ const NavStyle = styled.nav`
         }
     }
     @media only screen and (max-width: 820px){
+        padding: 0rem 1rem;
+        overflow-x: hidden;
         .nav-links{
             position: absolute;
             top: 10vh;
