@@ -8,7 +8,7 @@ const LocationItemStyle = styled.div`
     width: 100%;
     height: 100%;
     background: var(--sec-color);
-    border-radius: 20px;
+    border-radius: 20px  20px 0 0;
     padding: 1rem;
     display: flex;
     flex-direction: column;
