@@ -18,6 +18,21 @@ const LocationsStyle = styled.div`
         flex-direction: column;
         align-items: center;
     }
+    form{
+        position: relative;
+        padding: 1rem;
+        max-width: 300px;
+        margin-bottom: 5rem;
+        input{
+            width: 100%;
+            padding: 1rem;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            background: var(--sec-color);
+            color: var(--main-color);
+        }
+    }
     @media only screen and (max-width: 820px){
         padding: 1rem;
     }

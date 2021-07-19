@@ -4,9 +4,9 @@ import LocationsSection from '../components/LocationsSection';
 
 const Locations = () => {
     return(
-        <div>
+        <>
             <LocationsSection />
-        </div>
+        </>
     )
 }
 

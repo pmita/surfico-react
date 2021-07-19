@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: inherit;
     }
     :root{
-        --main-color: black;
+        --main-color: #222326;
         --sec-color: #fff;
         --h1: 3rem;
         --h2: 2.4rem;
