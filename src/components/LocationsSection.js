@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 //importing components
 import Headlines from './Headlines';
 import LocationItem from './LocationItem';
@@ -34,6 +34,26 @@ const LocationsBodyStyle = styled.div`
 const LocationsSection = () => {
     //Setting up our state
     const [allLocations, setAllLocations] = useState(locationData);
+    const [searchLocation, setSearchLocation] = useState('');
+
+    //Seetting our useEffect hooks
+    useEffect( ()=>{
+        if(searchLocation === '') return;
+        setAllLocations( () =>
+            locationData.filter( item =>
+                item.title.toLocaleLowerCase().match(searchLocation.toLocaleLowerCase())    
+            )   
+        );
+    }, [searchLocation]);
+
+    //Setting our handlers
+    const inputTextHandler = (e) => {
+        e.preventDefault();
+        setSearchLocation(e.target.value);
+        if(searchLocation === ''){
+            setAllLocations(locationData);
+        }
+    }
     return(
         <LocationsStyle>
             <Headlines 
@@ -41,6 +61,15 @@ const LocationsSection = () => {
                 header="Our Locations"
                 subheader="Some of our latest locations"
             />
+
+            <form>
+                <input 
+                    type="text"
+                    placeholder="Filter Location"
+                    onChange={inputTextHandler}
+                />
+            </form>
+
             <LocationsBodyStyle className="locations-body">
                   {allLocations.map( (item, index) => (
                     <LocationItem 

@@ -1,11 +1,11 @@
 import React from 'react';
+//importing components
+import About from '../components/About';
 
 const AboutUS = () => {
     return(
         <div>
-            <h1>Hello from AboutUS</h1>
-            <h1>Hello from AboutUS</h1>
-            <h1>Hello from AboutUS</h1>
+            <About />
         </div>
     )
 }

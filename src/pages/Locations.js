@@ -1,11 +1,11 @@
 import React from 'react';
+//import compoents
+import LocationsSection from '../components/LocationsSection';
 
 const Locations = () => {
     return(
         <div>
-            <h1>Hello from Locations</h1>
-            <h1>Hello from Locations</h1>
-            <h1>Hello from Locations</h1>
+            <LocationsSection />
         </div>
     )
 }
